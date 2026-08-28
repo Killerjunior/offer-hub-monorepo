@@ -13,21 +13,21 @@ const features = [
           title: "WCAG 2.1 Level AA Target",
           description:
                "We are committed to achieving Web Content Accessibility Guidelines 2.1 Level AA compliance — the industry standard for web accessibility. This standard ensures our platform is usable by individuals with vision, hearing, motor, and cognitive impairments.",
-          iconColor: "#149A9B",
+          iconColor: "var(--color-primary)",
      },
      {
           icon: AlertCircle,
           title: "Known Limitations",
           description:
                "Some PDF documents, third-party integrations, and real-time data visualizations have limited accessibility support. We're actively working on remediation with scheduled improvements through Q3 2026.",
-          iconColor: "#149A9B",
+          iconColor: "var(--color-primary)",
      },
      {
           icon: Mail,
           title: "Report Accessibility Issues",
           description:
                "Encountered an accessibility barrier? Email support@offerhub.io with details about the issue. We respond within 2 business days and work to resolve problems as quickly as possible.",
-          iconColor: "#149A9B",
+          iconColor: "var(--color-primary)",
      },
 ];
 

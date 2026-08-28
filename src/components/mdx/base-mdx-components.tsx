@@ -19,7 +19,7 @@ export const BASE_MDX_COMPONENTS: MDXComponents = {
         className="text-2xl font-black mt-16 mb-6 scroll-mt-32 flex items-center gap-3 tracking-tight text-content-primary"
         {...props}
       >
-        <span className="w-1 h-6 rounded-full bg-[#149A9B]" />
+        <span className="w-1 h-6 rounded-full bg-theme-primary" />
         {children}
       </h2>
     );
@@ -66,7 +66,7 @@ export const BASE_MDX_COMPONENTS: MDXComponents = {
 
   li: ({ children }) => (
     <li className="leading-relaxed flex items-start gap-2.5">
-      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-[#149A9B]/30 flex-shrink-0" />
+      <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-theme-primary/30 flex-shrink-0" />
       <span className="flex-1 font-medium">{children}</span>
     </li>
   ),

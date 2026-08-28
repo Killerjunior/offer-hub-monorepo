@@ -68,10 +68,7 @@ export function EndpointPanel({ endpoint }: EndpointPanelProps) {
 
   return (
     <div
-      className="rounded-2xl overflow-hidden bg-bg-base relative z-10"
-      style={{
-        boxShadow: "6px 6px 14px var(--shadow-dark), -6px -6px 14px var(--shadow-light)",
-      }}
+      className="rounded-2xl overflow-hidden bg-bg-base shadow-neu-raised relative z-10"
     >
       {/* ── Header button ── */}
       <button
@@ -79,14 +76,9 @@ export function EndpointPanel({ endpoint }: EndpointPanelProps) {
         className={cn(
           "w-full flex items-center gap-3 px-5 py-4 text-left transition-[background-color,box-shadow] duration-200",
           isOpen
-            ? "bg-bg-sunken"
+            ? "bg-bg-sunken shadow-neu-sunken-subtle"
             : "bg-bg-base hover:bg-bg-sunken/50",
         )}
-        style={
-          isOpen
-            ? { boxShadow: "inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light)" }
-            : {}
-        }
       >
         <MethodBadge method={endpoint.method} />
         <span className="text-sm font-mono font-semibold text-content-primary">
@@ -167,11 +159,7 @@ export function EndpointPanel({ endpoint }: EndpointPanelProps) {
                     value={bodyValue}
                     onChange={(e) => setBodyValue(e.target.value)}
                     rows={Math.min(bodyValue.split("\n").length + 1, 12)}
-                    className="w-full rounded-xl px-4 py-3 text-sm font-mono text-content-primary resize-y transition-shadow focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-0"
-                    style={{
-                      background: "var(--color-bg-sunken)",
-                      boxShadow: "inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light)",
-                    }}
+                    className="w-full rounded-xl px-4 py-3 text-sm font-mono text-content-primary resize-y bg-bg-sunken shadow-neu-sunken transition-shadow focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-0"
                   />
                 </div>
               )}
@@ -184,11 +172,7 @@ export function EndpointPanel({ endpoint }: EndpointPanelProps) {
               Request URL
             </h4>
             <div
-              className="rounded-xl px-4 py-2 text-sm font-mono break-all text-theme-primary"
-              style={{
-                background: "var(--color-bg-sunken)",
-                boxShadow: "inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light)",
-              }}
+              className="rounded-xl px-4 py-2 text-sm font-mono break-all text-theme-primary bg-bg-sunken shadow-neu-sunken-subtle"
             >
               <span className="text-content-secondary mr-1">{endpoint.method}</span>
               {buildUrl()}

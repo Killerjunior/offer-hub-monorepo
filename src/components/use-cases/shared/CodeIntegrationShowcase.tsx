@@ -217,10 +217,7 @@ export function CodeIntegrationShowcase({
         </div>
 
         <div
-          className="rounded-[2.5rem] bg-bg-elevated blueprint-layer"
-          style={{
-            boxShadow: "12px 12px 24px var(--shadow-dark), -12px -12px 24px var(--shadow-light)",
-          }}
+          className="rounded-[2.5rem] bg-bg-elevated shadow-neu-raised-l2 blueprint-layer"
         >
           <div className="flex flex-wrap items-center justify-between gap-3 rounded-t-[2.5rem] bg-bg-sunken px-6 py-4 shadow-neu-sunken-subtle">
             <div className="flex items-center gap-1">
@@ -237,17 +234,9 @@ export function CodeIntegrationShowcase({
                       "text-[11px] font-bold uppercase tracking-widest font-mono",
                       "transition-[color,background-color,box-shadow] duration-200 focus:outline-none",
                       isActive
-                        ? "text-theme-primary"
+                        ? "text-theme-primary bg-bg-base shadow-neu-raised"
                         : "text-content-muted hover:text-content-secondary"
                     )}
-                    style={
-                      isActive
-                        ? {
-                            background: "var(--color-bg-base)",
-                            boxShadow: "4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light)",
-                          }
-                        : {}
-                    }
                     role="tab"
                     aria-selected={isActive}
                   >
@@ -295,10 +284,7 @@ export function CodeIntegrationShowcase({
           {sdkCards.map((item) => (
             <div
               key={item.method}
-              className="rounded-[1.5rem] bg-bg-elevated p-5 blueprint-layer overflow-visible"
-              style={{
-                boxShadow: "8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light)",
-              }}
+              className="rounded-[1.5rem] bg-bg-elevated shadow-neu-raised-l2-sm p-5 blueprint-layer overflow-visible"
             >
               <div className="mb-3 inline-flex rounded-full bg-theme-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-theme-primary">
                 SDK

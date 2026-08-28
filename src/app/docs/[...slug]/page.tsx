@@ -85,7 +85,7 @@ export default async function DocPage({ params }: PageProps) {
       </div>
 
       {/* Edit on GitHub link */}
-      <div className="mt-8 pt-6 border-t" style={{ borderColor: "#d1d5db" }}>
+      <div className="mt-8 pt-6 border-t border-theme-border">
         <EditOnGitHub filePath={`content/docs/${doc.slug}.mdx`} />
       </div>
     </article>

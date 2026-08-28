@@ -58,7 +58,7 @@ export function Breadcrumb() {
       <div className="flex items-center gap-2 text-[14px] whitespace-nowrap overflow-x-auto no-scrollbar py-1">
         <Link
           href="/docs"
-          className="text-[#149A9B] hover:text-[#149A9B]/80 transition-colors font-medium flex items-center gap-1.5"
+          className="text-theme-primary hover:text-theme-primary/80 transition-colors font-medium flex items-center gap-1.5"
         >
           <Home size={15} />
           Docs

@@ -203,10 +203,7 @@ export function MermaidDiagram({
   return (
     <figure className="my-10">
       <div
-        className="rounded-3xl overflow-hidden bg-bg-elevated relative z-10"
-        style={{
-          boxShadow: "6px 6px 14px var(--shadow-dark), -6px -6px 14px var(--shadow-light)",
-        }}
+        className="rounded-3xl overflow-hidden bg-bg-elevated shadow-neu-raised relative z-10"
       >
         <div className="flex items-center justify-between px-6 py-4 rounded-t-3xl bg-bg-sunken shadow-neu-sunken-subtle">
           <div className="flex items-center gap-3">

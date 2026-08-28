@@ -95,13 +95,9 @@ export function CodeBlock({
     <div
       ref={containerRef}
       className={cn(
-        "relative rounded-3xl overflow-hidden my-10 bg-bg-elevated group transition-colors duration-300",
+        "relative rounded-3xl overflow-hidden my-10 bg-bg-elevated shadow-neu-raised group transition-colors duration-300",
         className
       )}
-      style={{
-        // Neumorphic outer shadow — distinct from page background
-        boxShadow: "6px 6px 14px var(--shadow-dark), -6px -6px 14px var(--shadow-light)",
-      }}
     >
       {/* Header bar — sunken, clean edges (no border) */}
       <div className="flex items-center justify-between px-6 py-4 rounded-t-3xl bg-bg-sunken shadow-neu-sunken-subtle">

@@ -22,7 +22,7 @@ export function ResponseViewer({ responses }: ResponseViewerProps) {
   }
 
   return (
-    <div className="rounded-2xl shadow-sunken overflow-hidden" style={{ background: "#0f172a" }}>
+    <div className="rounded-2xl shadow-neu-sunken overflow-hidden" style={{ background: "#0f172a" }}>
       {/* Tab bar */}
       <div
         className="flex items-center justify-between px-4 py-2 border-b"

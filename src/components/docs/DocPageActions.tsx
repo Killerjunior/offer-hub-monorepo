@@ -180,7 +180,7 @@ export function DocPageActions({ slug, title, description, markdownContent }: Do
         type="button"
         onClick={handleExportMarkdown}
         title="Export Markdown"
-        className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-[#149A9B]"
+        className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-theme-primary"
       >
         <FileCode2 size={18} />
       </button>
@@ -192,7 +192,7 @@ export function DocPageActions({ slug, title, description, markdownContent }: Do
         onClick={handleExportPdf}
         disabled={isExportingPdf}
         title="Export PDF"
-        className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-[#149A9B] disabled:opacity-50"
+        className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-theme-primary disabled:opacity-50"
       >
         {isExportingPdf ? <Download size={18} /> : <FileText size={18} />}
       </button>
@@ -204,7 +204,7 @@ export function DocPageActions({ slug, title, description, markdownContent }: Do
         target="_blank"
         rel="noopener noreferrer"
         title="Edit on GitHub"
-        className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-[#149A9B]"
+        className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-theme-primary"
       >
         <Github size={18} />
       </a>

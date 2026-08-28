@@ -18,14 +18,11 @@ export function RepoStats({
 
      if (isUnavailable) {
           return (
-               <div
-                    className="rounded-2xl p-6 shadow-raised"
-                    style={{ background: "#F1F3F7" }}
-               >
-                    <p className="text-sm font-semibold" style={{ color: "#19213D" }}>
+               <div className="rounded-2xl p-6 shadow-neu-raised bg-bg-base">
+                    <p className="text-sm font-semibold text-content-primary">
                          Stats temporarily unavailable
                     </p>
-                    <p className="mt-2 text-xs" style={{ color: "#6D758F" }}>
+                    <p className="mt-2 text-xs text-content-secondary">
                          Live GitHub repository metrics could not be loaded right now.
                     </p>
                </div>
@@ -62,20 +59,13 @@ export function RepoStats({
                     return (
                          <div
                               key={stat.label}
-                              className="flex flex-col items-center text-center p-6 rounded-2xl shadow-raised"
-                              style={{ background: "#F1F3F7" }}
+                              className="flex flex-col items-center text-center p-6 rounded-2xl shadow-neu-raised bg-bg-base"
                          >
-                              <Icon size={20} style={{ color: "#149A9B" }} />
-                              <span
-                                   className="text-3xl font-black tracking-tight mt-3"
-                                   style={{ color: "#149A9B" }}
-                              >
+                              <Icon size={20} className="text-theme-primary" />
+                              <span className="text-3xl font-black tracking-tight mt-3 text-theme-primary">
                                    {stat.value.toLocaleString()}
                               </span>
-                              <span
-                                   className="text-sm uppercase tracking-widest mt-2"
-                                   style={{ color: "#6D758F" }}
-                              >
+                              <span className="text-sm uppercase tracking-widest mt-2 text-content-secondary">
                                    {stat.label}
                               </span>
                          </div>

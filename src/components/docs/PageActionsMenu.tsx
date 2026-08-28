@@ -93,7 +93,7 @@ export function PageActionsMenu({ slug, title, markdownContent }: PageActionsMen
         aria-haspopup="menu"
         aria-expanded={isOpen}
         aria-controls="page-actions-menu"
-        className="neu-circle h-10 flex items-center gap-2 px-4 text-sm font-medium text-content-secondary hover:text-[#149A9B] focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-sunken"
+        className="neu-circle h-10 flex items-center gap-2 px-4 text-sm font-medium text-content-secondary hover:text-theme-primary focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-2 focus-visible:ring-2 focus-visible:ring-theme-primary focus-visible:ring-offset-2 focus-visible:ring-offset-bg-sunken"
       >
         {copied ? <Check size={16} /> : <Copy size={16} />}
         <span>{copied ? "Copied!" : "Copy page"}</span>
@@ -115,7 +115,7 @@ export function PageActionsMenu({ slug, title, markdownContent }: PageActionsMen
             type="button"
             role="menuitem"
             onClick={handleCopyPage}
-            className="w-full flex items-center gap-2 px-4 py-2 text-sm text-content-primary hover:text-[#149A9B] hover:bg-theme-primary/5 text-left focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-[-2px]"
+            className="w-full flex items-center gap-2 px-4 py-2 text-sm text-content-primary hover:text-theme-primary hover:bg-theme-primary/5 text-left focus-visible:outline-2 focus-visible:outline-theme-primary focus-visible:outline-offset-[-2px]"
           >
             {copied ? <Check size={16} /> : <Copy size={16} />}
             <span>{copied ? "Copied!" : "Copy page"}</span>

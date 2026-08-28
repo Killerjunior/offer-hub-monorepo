@@ -178,7 +178,7 @@ export function ExportJSON({ slug, title }: ExportJSONProps) {
       onClick={handleClick}
       title="Export JSON"
       aria-label="Export JSON"
-      className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-[#149A9B]"
+      className="neu-circle w-10 h-10 flex items-center justify-center text-content-secondary hover:text-theme-primary"
     >
       <FileJson size={18} aria-hidden="true" />
     </button>
