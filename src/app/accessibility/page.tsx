@@ -249,11 +249,11 @@ export default function AccessibilityPage() {
                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="p-4 rounded-lg bg-theme-primary/5 border border-theme-primary/20">
                                              <p className="text-xs font-bold text-theme-primary uppercase tracking-wider mb-1">Last Full Audit</p>
-                                             <p className="text-lg font-black text-content-primary">April 2026</p>
+                                             <p className="text-lg font-black text-content-primary">August 2026</p>
                                         </div>
                                         <div className="p-4 rounded-lg bg-theme-primary/5 border border-theme-primary/20">
                                              <p className="text-xs font-bold text-theme-primary uppercase tracking-wider mb-1">Next Review</p>
-                                             <p className="text-lg font-black text-content-primary">October 2026</p>
+                                             <p className="text-lg font-black text-content-primary">November 2026</p>
                                         </div>
                                    </div>
                               </div>
@@ -276,6 +276,14 @@ export default function AccessibilityPage() {
                                         <div>
                                              <p className="font-bold text-content-primary mb-2">Video Content</p>
                                              <p className="text-sm text-content-secondary mb-2">Archived videos may lack captions. All new videos include captions; existing ones updated progressively through Q3 2026.</p>
+                                        </div>
+                                        <div>
+                                             <p className="font-bold text-content-primary mb-2">Color Contrast</p>
+                                             <p className="text-sm text-content-secondary mb-2">Automated route-level testing (axe-core) still finds color-contrast failures on every page we check, most commonly small text using the brand teal, secondary, or muted text colors against light surfaces. The primary navigation call-to-action and two dark-mode-specific bugs have been fixed and verified this way; the broader palette has not. This needs a design-approved update to the color tokens, not a mechanical fix, and is tracked as active work rather than resolved. Remediation target: Q4 2026.</p>
+                                        </div>
+                                        <div>
+                                             <p className="font-bold text-content-primary mb-2">Keyboard Navigation</p>
+                                             <p className="text-sm text-content-secondary mb-2">An automated check now runs on every change to confirm interactive elements are reachable via Tab with no focus trap and a visible focus indicator. This is a smoke test, not a full manual audit - reading order and screen-reader announcement quality still need a human pass, which has not yet been done.</p>
                                         </div>
                                    </div>
                               </div>

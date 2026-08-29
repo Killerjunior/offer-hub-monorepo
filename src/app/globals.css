@@ -240,8 +240,11 @@ body::before {
   }
 
   /* ── 3D Colored Neumorphic Buttons ── */
+  /* Ramp darkened from the brand teal (#149A9B/#15A9AA/#0D7377) so white
+     text clears WCAG AA 4.5:1 in every state: default 4.93:1, hover 6.29:1,
+     active 8.10:1 (was as low as 2.43:1 on hover). See issue #1499. */
   .btn-neumorphic-primary {
-    background: var(--color-primary);
+    background: #107D7E;
     box-shadow:
       6px 6px 12px var(--shadow-dark),
       -6px -6px 12px var(--shadow-light),
@@ -252,7 +255,8 @@ body::before {
   }
 
   .btn-neumorphic-primary:hover {
-    background: var(--color-primary-hover);
+    background: #0E6B6C;
+    /* Slightly brighter highlight */
     box-shadow:
       3px 3px 6px var(--shadow-dark),
       -3px -3px 6px var(--shadow-light),
@@ -262,6 +266,7 @@ body::before {
   }
 
   .btn-neumorphic-primary:active {
+    background: #0C595A;
     box-shadow:
       inset 5px 5px 10px rgba(0, 0, 0, 0.2),
       inset -5px -5px 10px rgba(255, 255, 255, 0.15);
@@ -296,7 +301,10 @@ body::before {
   }
 
   /* ── Dark Mode Neumorphic Buttons ── */
+  /* Same AA-compliant ramp as the light mode button above (contrast is a
+     property of the button's own bg/fg pair, not the surrounding page). */
   .dark .btn-neumorphic-primary {
+    background: #107D7E;
     box-shadow:
       6px 6px 12px var(--shadow-dark),
       -6px -6px 12px var(--shadow-light),
@@ -305,6 +313,7 @@ body::before {
   }
 
   .dark .btn-neumorphic-primary:hover {
+    background: #0E6B6C;
     box-shadow:
       3px 3px 6px var(--shadow-dark),
       -3px -3px 6px var(--shadow-light),
@@ -313,6 +322,7 @@ body::before {
   }
 
   .dark .btn-neumorphic-primary:active {
+    background: #0C595A;
     box-shadow:
       inset 5px 5px 10px rgba(0, 0, 0, 0.4),
       inset -5px -5px 10px rgba(255, 255, 255, 0.05);
