@@ -34,8 +34,9 @@ The separate `apps/worker` package is deprecated; do not deploy it as a second r
 
 ## Architecture Overview
 
-```mermaid
-flowchart TB
+<MermaidDiagram
+  caption="Marketplace requests enter the Orchestrator, which coordinates ledger, escrow, events, and idempotency work."
+  chart={`flowchart TB
     subgraph Marketplace["Your Marketplace"]
         Frontend[Frontend]
         Backend[Backend]
@@ -55,8 +56,10 @@ flowchart TB
     Orchestrator --> Trustless
 
     Stellar[Stellar Network USDC]
-    Trustless[Trustless Work Soroban Contracts Non-custodial]
-```
+    Trustless[Trustless Work Soroban Contracts Non-custodial]`}
+/>
+
+This view is verified against `apps/api/src/modules/orders/orders.controller.ts`, its `dto/create-order.dto.ts`, and `apps/api/src/modules/events/event-catalog.ts` in the Orchestrator repository; those files define the REST boundary, order input, and emitted domain events represented here.
 
 ### Key Components
 

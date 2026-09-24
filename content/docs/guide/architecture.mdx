@@ -19,8 +19,9 @@ OFFER-HUB is **not a shared SaaS**. Every marketplace runs its own isolated Orch
 
 ## System Overview
 
-```mermaid
-flowchart TB
+<MermaidDiagram
+  caption="Each marketplace owns an isolated Orchestrator and database."
+  chart={`flowchart TB
     subgraph MarketA["Marketplace A"]
         A_Backend --> A_Orch[Orchestrator A]
     end
@@ -31,8 +32,10 @@ flowchart TB
     B_Orch --> Stellar
     Stellar --> Trustless[Trustless Work Soroban Contracts]
     A_Orch -.->|Isolated| A_DB[(PostgreSQL A)]
-    B_Orch -.->|Isolated| B_DB[(PostgreSQL B)]
-```
+    B_Orch -.->|Isolated| B_DB[(PostgreSQL B)]`}
+/>
+
+This deployment boundary is verified against the Orchestrator's `apps/api/src/main.ts` bootstrap and `packages/database/prisma/schema.prisma`; each installation supplies its own service configuration and database connection.
 
 ## Next Steps
 

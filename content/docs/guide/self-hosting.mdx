@@ -35,8 +35,9 @@ Verify that Docker is installed and running:
 The repository's root Compose file starts only the infrastructure dependencies. The API is built and
 run from the repository separately:
 
-```mermaid
-flowchart LR
+<MermaidDiagram
+  caption="The API runs alongside PostgreSQL and Redis, and connects to the Stellar network."
+  chart={`flowchart LR
     API[apps/api NestJS]
     Postgres[PostgreSQL]
     Redis[Redis BullMQ]
@@ -44,8 +45,10 @@ flowchart LR
 
     API --> Postgres
     API --> Redis
-    API --> Stellar
-```
+    API --> Stellar`}
+/>
+
+The topology is verified against the Orchestrator root `docker-compose.yml`, `apps/api/src/main.ts`, and `apps/api/src/modules/webhooks/webhooks.controller.ts`: Compose provides PostgreSQL and Redis while the API hosts both REST endpoints and inbound webhook handling.
 
 ## Docker Setup
 
