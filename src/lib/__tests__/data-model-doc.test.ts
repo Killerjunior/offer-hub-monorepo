@@ -6,8 +6,8 @@ import { getDocBySlug, getSidebarNav } from "../mdx";
 
 const DOCS_DIR = path.join(process.cwd(), "content/docs");
 
-/** Optional `\r` so the fence matches both LF and Windows CRLF checkouts. */
-const MERMAID_FENCE = /```mermaid\r?\n([\s\S]*?)```/;
+/** Extract the Mermaid chart passed to the shared docs diagram component. */
+const MERMAID_DIAGRAM_CHART = /<MermaidDiagram[\s\S]*?chart=\{`([\s\S]*?)`\}[\s\S]*?\/>/;
 
 const EXPECTED_MODELS = [
   "User",
@@ -55,9 +55,9 @@ describe("docs/guide/data-model", () => {
     }
   });
 
-  it("includes a mermaid entity-relationship diagram of the core entities", () => {
+  it("includes a shared Mermaid entity-relationship diagram of the core entities", () => {
     const doc = getDocBySlug("guide/data-model")!;
-    const match = doc.content.match(MERMAID_FENCE);
+    const match = doc.content.match(MERMAID_DIAGRAM_CHART);
     expect(match).not.toBeNull();
 
     const chart = match![1];
@@ -80,7 +80,7 @@ describe("docs/guide/data-model", () => {
 
   it("is a valid mermaid erDiagram that parses", async () => {
     const doc = getDocBySlug("guide/data-model")!;
-    const match = doc.content.match(MERMAID_FENCE);
+    const match = doc.content.match(MERMAID_DIAGRAM_CHART);
     const mermaid = await import("mermaid");
     await expect(mermaid.default.parse(match![1])).resolves.toBeTruthy();
   });
