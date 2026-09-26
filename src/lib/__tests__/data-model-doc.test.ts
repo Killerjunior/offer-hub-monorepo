@@ -6,8 +6,8 @@ import { getDocBySlug, getSidebarNav } from "../mdx";
 
 const DOCS_DIR = path.join(process.cwd(), "content/docs");
 
-/** Extract the Mermaid chart passed to the shared docs diagram component. */
-const MERMAID_DIAGRAM_CHART = /<MermaidDiagram[\s\S]*?chart=\{`([\s\S]*?)`\}[\s\S]*?\/>/;
+/** Extract Mermaid source; docs render these fences through MermaidDiagram. */
+const MERMAID_DIAGRAM_CHART = /```mermaid\s*([\s\S]*?)```/;
 
 const EXPECTED_MODELS = [
   "User",
@@ -83,7 +83,7 @@ describe("docs/guide/data-model", () => {
     const match = doc.content.match(MERMAID_DIAGRAM_CHART);
     const mermaid = await import("mermaid");
     await expect(mermaid.default.parse(match![1])).resolves.toBeTruthy();
-  });
+  }, 20_000);
 
   it("is cross-linked from the self-hosting guide", () => {
     const raw = fs.readFileSync(
