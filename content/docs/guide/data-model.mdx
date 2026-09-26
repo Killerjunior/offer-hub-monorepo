@@ -19,9 +19,8 @@ OFFER-HUB persists all state in a PostgreSQL database driven by Prisma. This pag
 
 The following ER diagram shows every table and how they reference each other. Currency amounts are stored as **decimal strings** (`"100.00"`), not floats, to preserve exact precision in financial arithmetic.
 
-<MermaidDiagram
-  caption="Core PostgreSQL relationships defined by the Prisma schema."
-  chart={`erDiagram
+```mermaid
+erDiagram
     users ||--o| balances : "has one"
     users ||--o{ wallets : "owns"
     users ||--o{ topups : "initiates"
@@ -30,8 +29,10 @@ The following ER diagram shows every table and how they reference each other. Cu
     users ||--o{ orders : "as seller"
     orders ||--o| escrows : "funds"
     orders ||--o| disputes : "may have"
-    orders ||--o{ milestones : "splits into"`}
-/>
+    orders ||--o{ milestones : "splits into"
+```
+
+Core PostgreSQL relationships defined by the Prisma schema.
 
 ## Model Reference
 
